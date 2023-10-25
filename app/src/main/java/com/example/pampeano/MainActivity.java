@@ -34,6 +34,11 @@ public class MainActivity extends AppCompatActivity {
     DBHelper DB;
     private static final int CREATEPDF = 1;
 
+    //teste git
+
+
+
+
     String[] categoriaT = new String[]{"Pareja", "Cuarteto", "Grupo", "Malambo"};
     String[] categoriaI = new String[]{"Pré infantil", "Infantil", "Juvenil", "Adulto", "Veterano", "Adulto Mayor"};
     String[] modo = new String[]{"Tradicional", "Proyección", "Estilizado", "Solista", "Conjunto"};
