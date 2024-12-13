@@ -22,7 +22,6 @@ public class DBHelper extends SQLiteOpenHelper {
     @Override
     public void onUpgrade(SQLiteDatabase MyDB, int i, int i1) {
         MyDB.execSQL("drop table if exists users");
-
     }
 
     public Boolean insereBanco(String usuario, String senha) {

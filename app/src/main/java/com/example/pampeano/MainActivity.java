@@ -34,15 +34,12 @@ public class MainActivity extends AppCompatActivity {
     DBHelper DB;
     private static final int CREATEPDF = 1;
 
-    //teste git
-
-
-
-
     String[] categoriaT = new String[]{"Pareja", "Cuarteto", "Grupo", "Malambo"};
     String[] categoriaI = new String[]{"Pré infantil", "Infantil", "Juvenil", "Adulto", "Veterano", "Adulto Mayor"};
     String[] modo = new String[]{"Tradicional", "Proyección", "Estilizado", "Solista", "Conjunto"};
-    String[] nomeG = new String[]{"Pedreiro", "Eletricista", "Engenheiro", "Encanador", "Téc. Edificações", "Servente de Pedreiro", "Ferreiro"};
+    String[] nomeG = new String[]{"Un nuevo rumbo", "Entre Vientos", "PTG Tiradentes", "Arte t Expresión", "Luz de Luna",
+            "Memoria y Esperanza", "Guazuvirá", "Andanza", "Rincão da Fronteira", "El Estribo", "Flor de Amancay", "El Reencuentro",
+            "Raza Gaucha", "Rumbo Norte", "Independiente" };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -100,7 +97,6 @@ public class MainActivity extends AppCompatActivity {
         intent.setType("application/pdf");
         intent.putExtra(Intent.EXTRA_TITLE, title);
         startActivityForResult(intent, CREATEPDF);
-
     }
 
     @Override
@@ -175,20 +171,6 @@ public class MainActivity extends AppCompatActivity {
                     canvas.drawText("Utilizacion de escenario: " + nota7, 50, 560, paint);
                     canvas.drawText("Total: " + nf, 50, 650, paint);
 
-
-                    // canvas.drawLine(48, 120, pageInfo.getPageWidth() - 100, 120, paint);
-                    //  canvas.drawLine(48, 150, pageInfo.getPageWidth() - 100, 150, paint);
-                    //  canvas.drawLine(48, 170, pageInfo.getPageWidth() - 100, 180, paint);
-                    // canvas.drawLine(48, 200, pageInfo.getPageWidth() - 100, 210, paint);
-                    //canvas.drawLine(48, 230, pageInfo.getPageWidth() - 100, 240, paint);
-                    //canvas.drawLine(48, 260, pageInfo.getPageWidth() - 100, 270, paint);
-                    // canvas.drawLine(48, 290, pageInfo.getPageWidth() - 100, 300, paint);
-                    // canvas.drawLine(48, 320, pageInfo.getPageWidth() - 100, 330, paint);
-                    // canvas.drawLine(48, 350, pageInfo.getPageWidth() - 100, 360, paint);
-                    //  canvas.drawLine(48, 380, pageInfo.getPageWidth() - 100, 390, paint);
-                    //  canvas.drawLine(48, 430, pageInfo.getPageWidth() - 100, 440, paint);
-                    // canvas.drawLine(48, 460, pageInfo.getPageWidth() - 100, 470, paint);
-                    //canvas.drawLine(48, 730, pageInfo.getPageWidth() - 100, 740, paint);
                     pdfDocument.finishPage(page);
                     gravarPdf(caminhoDoArquivo, pdfDocument);
                 }
@@ -204,7 +186,6 @@ public class MainActivity extends AppCompatActivity {
             stream.flush();
             Toast.makeText(this, "PDF Gravado Com Sucesso", Toast.LENGTH_LONG).show();
             limparCampos();
-
 
         } catch (FileNotFoundException e) {
             Toast.makeText(this, "Erro de arquivo não encontrado", Toast.LENGTH_LONG).show();

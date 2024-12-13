@@ -42,9 +42,7 @@ public class cadastro extends AppCompatActivity {
                 String cpass = csenha.getEditText().getText().toString();
 
                 if (user.equals("") || pass.equals("") || cpass.equals("")) {
-
                     Toast.makeText(cadastro.this, "Preencha todos os campos", Toast.LENGTH_SHORT).show();
-
                 } else {
                     if (pass.equals(cpass)) {
                         Boolean checkUser = DB.checkUsuario(user);
